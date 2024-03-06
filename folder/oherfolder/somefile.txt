@@ -1,0 +1,10 @@
+Un fichero de texto!!!!!!!!!
+Cómo crear un usuario
+git config --global user.name "<name>"    // Crear usuario de Git
+git config --global user.email "<email>"  // Asignar email al usuario de Git
+Cómo crear un alias de un comando extenso
+git config --global alias.<your-alias> "<real-command-without-git>"       // Crear alias
+
+git config --global alias.s "status -s -b"                                // Alias del status
+git config --global alias.lg "log --oneline --decorate --all --graph"     // Alias del log con el árbol
+git config --global alias.lgp "log --pretty=format:'%h - %an, %ar : %s'"  // Alias del log con "Hash + AuthorName + Author date, relative + Subject". Ejemplo: ca82a6d - Scott Chacon, 6 years ago : changed the version number
