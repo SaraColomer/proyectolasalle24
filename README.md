@@ -1,2 +1,2 @@
 # proyectolasalle24
-Repositorio de prácticas '24
+Repositorio de prácticas 2024
