@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+    max-width: 1024px;
+    margin: auto !important;
+    /*height: 100dvh altura para dispositivos moviles*/
+    /*box-shadow: 0 0 100px rgb(122, 78, 148);*/
+}
+
+p {
+    text-wrap: pretty;
+}
+
+.imagenCabecera {
+    height: 350px;
+    background-image: url(img/header.jpg);
+    background-position: center 45%;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    margin-left: 50px;
+}
+
+/*---------------------------------------BARRA DE NAVEGACION Y SUBMENÚ SERVICES-----------------------------------------*/
+
+.barranav {
+    background-color: rgb(122, 78, 148);
+}
+
+#navBar ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    font-size: x-large;
+    list-style: none;
+    padding-left: 0px;
+    justify-content: left;
+    margin: 0;
+}
+
+#navBar a {
+    background-color: rgb(122, 78, 148);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+}
+
+#navBar a:hover {
+    background-color: white;
+    color: rgb(122, 78, 148);
+}
+
+#navBar .submenu {
+    display: none;
+    position: absolute;
+    top: 72px;
+    /*para bajarlo para cuadrarlo con la barra de navegacion...*/
+    left: 165px;
+}
+
+#navBar li:hover .submenu {
+    display: block;
+}
+
+#navBar .submenu ul {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+#navBar .submenu {
+    padding: 0;
+    margin: 0;
+}
+
+#navBar .submenu li {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#navBar .submenu a {
+    padding-left: 15.5px;
+    padding-right: 15.5px;
+    border: 1px solid rgb(122, 78, 148);
+    /*para que no aparezca el espacio en blanco dando errores en la barra*/
+}
+
+/* -----------------------------------------------Who We Are SECTION--------------------------------------------------- */
+
+#whoWeAre h2 {
+    margin: 20px auto;
+    width: max-content;
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+h2+p {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#whoWeAre .imagen1 {
+    float: left;
+    margin-right: 10px;
+}
+
+#whoWeAre {
+    text-align: justify;
+}
+
+.leftArticle {
+    float: left;
+}
+
+.rightArticle {
+    float: right;
+}
+
+/*---------------------------------------------------OUR SERVICES SECTION-------------------------------------------------------*/
+
+#services h2 {
+    margin: auto;
+    margin-bottom: 40px;
+    width: max-content;
+    grid-area: title;
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+
+/*Nombramos a cada seccion del display grid para decidir como los desplegamos */
+
+#service1 {
+    grid-area: article1;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "i title"
+        "i lorem";
+}
+
+#services h3 {
+    margin: auto;
+    width: max-content;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+#services i {
+    font-size: 1.5em;
+    padding: 20px;
+    transition: 1s;
+    border: 3px solid lightgrey;
+    border-radius: 50%;
+    color: rgb(89, 58, 125);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+#services i:hover {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(131, 91, 176);
+    color: white;
+    transition: 1s;
+    margin: 3px;
+}
+
+/*------------------------------------------------PORTFOLIO SECTION-----------------------------------------------------*/
+
+#portfolio h2 {
+    margin: auto;
+    width: max-content;
+    margin-top: 50px;
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+#portfolio h4 {
+    width: max-content;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: rgb(160, 159, 159);
+    font-weight: 400;
+}
+
+#portfolio img {
+    width: 300px;
+    margin: 5px auto;
+    transition: 1s;
+    height: 200px;
+}
+
+#portfolio img:hover {
+    transform: scale(1.1) rotate(-15deg);
+    margin: 5px;
+}
+
+#portfolio .img6:hover {
+    transform: rotate(360deg);
+    border-radius: 50%;
+}
+
+/*--------------------------------------------------LOCATION SECTION----------------------------------------------------*/
+#location {
+    margin: 0 auto;
+}
+
+#location h2 {
+    margin: auto;
+    width: max-content;
+    margin-top: 50px;
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.findUs h3 {
+    margin: auto;
+    width: max-content;
+    font-size: medium;
+    margin-top: 20px;
+    color: grey;
+    font-weight: 400;
+    grid-area: title;
+}
+
+iframe {
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 300px;
+    height: 300px;
+    grid-area: map;
+    transition: 1s;
+}
+
+iframe:hover {
+    transform: scale(1.2);
+    border-radius: 0%;
+}
+
+.findUs {
+    width: max-content;
+    margin: auto;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "title title"
+        "map address";
+    place-items: center;
+}
+
+.address {
+    grid-area: address;
+    width: max-content;
+}
+
+.address h4:first-child {
+    margin-top: 0px;
+}
+
+/*-----------------------------------------------EMAIL US SECTION-------------------------------------------------------*/
+
+#emailUs {
+    background-color: rgb(89, 58, 125);
+    margin: auto;
+    color: white;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    background-image: url(img/map-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#emailUs form {
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    width: max-content;
+}
+
+label {
+    width: 120px;
+    display: inline-block;
+    font-size: 1.4em;
+    text-align: left;
+}
+
+input {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 5px;
+    width: 300px;
+}
+
+textarea {
+    width: 300px;
+    border-radius: 5px;
+
+    vertical-align: top;
+}
+
+input[type="submit"] {
+    margin-top: 30px;
+    width: 100px;
+    margin-right: 70px;
+    height: 25px;
+}
+
+/*----------------------------------------------------------FOOTER---------------------------------------------------------*/
+
+footer {
+    background-color: rgb(122, 78, 148);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 1024px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0;
+    width: max-content;
+    margin: auto;
+    margin-top: 15px;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: rgb(122, 78, 148);
+    background-color: white;
+}
+
+footer img {
+    float: left;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    width: 150px;
+}
+
+footer .backToTop {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    text-align: center;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.backToTop p {
+    margin-top: 0px;
+    font-size: smaller;
+}
+
+.backToTop:hover {
+    color: rgb(122, 78, 148);
+    background-color: white;
+    font-weight: bold;
+}
